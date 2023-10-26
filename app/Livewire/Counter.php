@@ -16,12 +16,6 @@ class Counter extends Component
     {
         $this->counter = 100;
 
-        $user = new User;
-        $user->fill([
-            'name' => 'John',
-            'lastName' => 'Doe',
-        ]);
-
         $this->fill([
             'name' => 'John',
             'lastName' => 'Doe',
@@ -31,5 +25,9 @@ class Counter extends Component
     public function render()
     {
         return view('livewire.counter');
+    }
+
+    public function refresh(): void
+    {
     }
 }
