@@ -1,3 +1,9 @@
 <div>
-    Hello, world!.
+    <div>
+        Hello World
+    </div>
+
+    <br>
+
+    Counter:: {{ $counter }}
 </div>
