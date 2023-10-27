@@ -13,6 +13,9 @@
         <span wire:loading wire:target='calculate'>Calculando...</span>
     </x-primary-button>
 
+    <x-primary-button type="button" wire:click="add10('num1')">add 10 num 1</x-primary-button>
+    <x-primary-button type="button" wire:click="add10('num2')">add 10 num 2</x-primary-button>
+
     <br>
 
     Resultado: {{ $result }}
