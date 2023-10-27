@@ -3,9 +3,10 @@
 namespace App\Livewire;
 
 use App\Models\User;
-use Livewire\Attributes\Computed;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Livewire\Attributes\Computed;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class UserList extends Component
 {
@@ -17,7 +18,7 @@ class UserList extends Component
     }
 
     #[Computed]
-    public function users(): \Illuminate\Pagination\LengthAwarePaginator
+    public function users(): LengthAwarePaginator
     {
         return User::query()
             ->select(['id', 'name', 'email'])
