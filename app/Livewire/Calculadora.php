@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class Calculadora extends Component
 {
-    public ?string $num1 = null;
+    public int $num1 = 0;
     public float $num2 = 0;
     public string $operator = '+';
     public float $result = 0;
@@ -36,6 +36,8 @@ class Calculadora extends Component
 
     public function add10($prop)
     {
+        $this->authorize('add10', $this);
+
         $this->$prop += 10;
     }
 }
